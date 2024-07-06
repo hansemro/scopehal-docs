@@ -26,7 +26,7 @@ jobs:
     - name: Install Node.js
       uses: actions/setup-node@v4
       with:
-        node-version: '18'
+        node-version: '20'
     - name: Install Antora
       run: npm i antora@^3.1.9
     - name: Install Antora PDF Extension
@@ -39,10 +39,14 @@ jobs:
       run: bundle config --local path .bundle/gems && bundle
     - name: Generate Site
       run: npx antora antora-playbook.yml
-    - name: Upload Artifacts
-      uses: actions/upload-pages-artifact@v2
+    - name: Upload Site Artifacts
+      uses: actions/upload-pages-artifact@v3
       with:
         path: build/site
+    - name: Upload Assembler Artifacts
+      uses: actions/upload-artifact@v4
+      with:
+        path: build/assembler
     - name: Deploy to GitHub Pages
       id: deployment
-      uses: actions/deploy-pages@v2
+      uses: actions/deploy-pages@v4
