@@ -1,5 +1,6 @@
 site:
   title: ngscopeclient Operator Manual
+  url: https://hansemro.github.io/scopehal-docs/
 content:
   sources:
   - url: ./
