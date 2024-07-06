@@ -1,0 +1,24 @@
+name: ngscopeclient
+title: ngscopeclient Operator Manual
+version: 0.1
+start_page: index.adoc
+asciidoc:
+  attributes:
+    author_1: 'Andrew D. Zonenberg'
+    sectnums: ''
+    release-date: '2024-06-25'
+    release-tag: testing
+    release-version: '3.2.0-alpha.5'
+    source-language: asciidoc@
+    xrefstyle: short@
+    example-caption: false
+    listing-caption: Example@
+    version-node-major: '20'
+    version-node: '20.15.0'
+    version-npm: '10.7.0'
+    url-node-releases: https://nodejs.org/en/about/releases/
+    url-chat: https://chat.antora.org
+    url-repo: https://gitlab.com/antora/antora
+    url-asciidoc: https://docs.asciidoctor.org/asciidoc/latest
+nav:
+  - modules/ROOT/pages/nav.adoc

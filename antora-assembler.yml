@@ -1,0 +1,10 @@
+root_level: 0
+component_versions: '*'
+section_merge_strategy: fuse
+asciidoc:
+  attributes:
+    toc: ''
+    toclevels: 3
+    pdf-theme: ./pdf-theme.yml
+build:
+  command: bundle exec asciidoctor-pdf
