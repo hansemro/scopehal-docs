@@ -21,4 +21,4 @@ asciidoc:
     url-repo: https://gitlab.com/antora/antora
     url-asciidoc: https://docs.asciidoctor.org/asciidoc/latest
 nav:
-  - modules/ROOT/pages/nav.adoc
+  - modules/ROOT/nav.adoc

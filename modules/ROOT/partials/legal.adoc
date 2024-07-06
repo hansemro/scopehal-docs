@@ -1,0 +1,2 @@
+* .xref:section-ng-legal.adoc[Legal Notices]
+** .xref:section-ng-legal.adoc#_introduction[Introduction]
