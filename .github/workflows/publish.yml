@@ -26,7 +26,7 @@ jobs:
     - name: Install Sphinx with extensions in python venv
       run: "python3 -m venv venv && source venv/bin/activate && pip3 install -r requirements.txt"
     - name: Build HTML and PDF
-      run: "make html latexpdf"
+      run: "source venv/bin/activate && make html latexpdf"
     - name: Upload Site Artifacts
       uses: actions/upload-pages-artifact@v3
       with:
