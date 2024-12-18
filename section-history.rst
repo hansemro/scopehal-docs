@@ -1,43 +1,42 @@
-\chapter{History}
-\label{sec:history}
+.. _sec:history:
+
+History
+=======
 
 ngscopeclient saves a rolling buffer of previous waveforms in memory, allowing you to go back in time and see previous
-state of the system being debugged. Clicking on a timestamp in the history view (Fig. \ref{historyview}) pauses
+state of the system being debugged. Clicking on a timestamp in the history view (:numref:`historyview`) pauses
 acquisition and loads the historical waveform data for analysis. History is captured regardless of whether the window
 is visible or not.
 
-\begin{figure}[H]
-\centering
-\includegraphics[width=7cm]{ng-images/history.png}
-\caption{Waveform history view}
-\label{historyview}
-\end{figure}
+.. _historyview:
+.. figure:: ng-images/history.png
+    :figclass: align-center
+
+    Waveform history view
 
 The history depth defaults to 10 waveforms, but can be set arbitrarily within the limits of available RAM. Older
 waveforms beyond the history limit are deleted as new waveforms are acquired. Any single waveform in history may also
-be deleted by right clicking on the line and selecting ``delete" from the menu.
+be deleted by right clicking on the line and selecting ``delete`` from the menu.
 
-%The status bar at the bottom of the history view displays the total number of waveforms in the history, as well as an
-%estimate of the amount of RAM used by the history.
+Pinning
+-------
 
-\section{Pinning}
-
-Interesting waveforms may be ``pinned" in the history by checking the box in the ``pin" column of the history view.
+Interesting waveforms may be "pinned" in the history by checking the box in the ``pin`` column of the history view.
 Pinned waveforms are guaranteed to remain in the history buffer even when new waveforms arrive; only unpinned waveforms
 are eligible for automatic deletion to make space for incoming data.
 
-If a waveform contains markers (\ref{sec:markers}), it is automatically pinned and cannot be unpinned unless the
+If a waveform contains markers (:ref:`sec:markers`), it is automatically pinned and cannot be unpinned unless the
 marker (or entire waveform) is deleted. This prevents accidental loss of an important waveform: if the event was
 important enough to mark and name, it is probably worth keeping around.
 
-\section{Labeling}
+Labeling
+--------
 
-Arbitrary text names may be assigned to a waveform by clicking the corresponding cell in the ``label" column.
+Arbitrary text names may be assigned to a waveform by clicking the corresponding cell in the ``label`` column.
 Waveforms with a label are automatically pinned, since assigning a label implies the waveform is important.
 
-\begin{comment}
-
-\section{Estimating Waveform Memory Usage}
+Estimating Waveform Memory Usage
+--------------------------------
 
 When selecting a maximum depth for the history, it is important to pick a reasonable limit to avoid running out of RAM!
 ngscopeclient will happily fill tens or hundreds of gigabytes of memory with deep waveforms if given a chance. Memory
@@ -61,4 +60,3 @@ Filter memory usage varies depending on the specific filter in question, however
 contributor to the overall ngscopeclient RAM footprint when using history mode because filters are evaluated
 dynamically each time a waveform is pulled from history rather than having output cached for every historical waveform.
 Thus, at most one copy of each filter's output is present in memory regardless of history depth.
-\end{comment}
