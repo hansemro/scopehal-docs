@@ -21,10 +21,12 @@ jobs:
       uses: actions/checkout@v4
     - name: Configure Pages
       uses: actions/configure-pages@v3
-    - name: Build HTML
+    - name: Build HTML and PDF
       uses: ammaraskar/sphinx-action@master
       with:
         docs-folder: "./"
+        pre-build-command: "sudo apt-get update -y && sudo apt-get install -y texlive-latex-recommended latexmk texlive-xetex"
+        build-command: "make html latexpdf"
     - name: Upload Site Artifacts
       uses: actions/upload-pages-artifact@v3
       with:
