@@ -44,3 +44,14 @@ html_secnumber_suffix = " "
 
 latex_engine = 'xelatex'
 latex_theme = 'manual'
+latex_elements = {
+    'tableofcontents': r'\tableofcontents',
+    'preamble': r'''
+\usepackage{tocloft}
+\setlength{\cftsecindent}{2em}
+\setlength{\cftsecnumwidth}{3.75em}
+\setlength{\cftsubsecindent}{4em}
+\setlength{\cftsubsecnumwidth}{4.5em}
+\renewcommand{\sphinxtableofcontentshook}{}
+''',
+}
