@@ -22,7 +22,7 @@ jobs:
     - name: Configure Pages
       uses: actions/configure-pages@v3
     - name: Install dependencies
-      run: "sudo apt-get update -y && sudo apt-get install -y texlive-latex-recommended latexmk texlive-xetex python3-full"
+      run: "sudo apt-get update -y && sudo apt-get install -y texlive-latex-recommended latexmk texlive-xetex texlive-latex-extra texlive-fonts-recommended python3-full"
     - name: Install Sphinx with extensions in python venv
       run: "python3 -m venv venv && source venv/bin/activate && pip3 install -r requirements.txt"
     - name: Build HTML and PDF
