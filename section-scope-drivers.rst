@@ -404,13 +404,13 @@ This driver supports the newer RTO6 family scopes (and possibly others, untested
 Saleae
 ------
 
-TODO (`scopehal:16 <https://github.com/ngscopeclient/scopehal/issues/16>`)
+TODO (`scopehal:16 <https://github.com/ngscopeclient/scopehal/issues/16>`_)
 
 Siglent
 -------
 
-A driver for SDS2000X^/HD is available in the codebase which has been developed according to Siglent offical documentation
-(Programming Guide PG01-E11A). This driver should be functional across the 'next generation' SDS800X HD, SDS1000X HD, SDS2000X^,
+A driver for SDS2000X+/HD is available in the codebase which has been developed according to Siglent offical documentation
+(Programming Guide PG01-E11A). This driver should be functional across the 'next generation' SDS800X HD, SDS1000X HD, SDS2000X+,
 SDS2000X HD, SDS5000X, SDS6000A/L/Pro and SDS7000A scopes. It has been primarily developed using the SDS2000X^ and SDS2000X HD.
 Some older generation scopes are supported as well.
 
@@ -424,7 +424,7 @@ SDS1000X-E series      siglent  lan        Initialises, triggers and downloads w
 SDS2000X-E series      siglent  lan        Initialises, triggers and downloads waveforms. More testing needed
 SDS800X HD series      siglent  lan        Basic functionality complete/tested.
 SDS1000X HD series     siglent  lan        Basic functionality complete, needs testing.
-SDS2000X^ series       siglent  lan        Basic functionality complete.
+SDS2000X+ series       siglent  lan        Basic functionality complete.
 SDS2000X HD series     siglent  lan        Tested and works well on SDS2354x HD.
 SDS3000X HD series     siglent  lan        Basic functionality complete, needs testing.
 SDS5000X series        siglent  lan        Initialises, triggers and downloads waveforms. More testing needed
